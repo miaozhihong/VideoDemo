@@ -1,0 +1,1422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.jm.mvp.ui.activity.TelDetailActivity">
+
+    <include layout="@layout/layout_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_e1e1e1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x110"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="项目开发负责人:" />
+
+
+                <TextView
+                    android:id="@+id/tv_development_select"
+                    style="@style/style_detail_right"
+                    android:text="请选择" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1" />
+
+
+            <LinearLayout
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/style_detail_lefts"
+                        android:text="分店经度:" />
+
+                    <TextView
+                        android:id="@+id/tv_talk_longitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="点击获取"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/style_detail_lefts"
+                        android:text="分店纬度:" />
+
+                    <TextView
+                        android:id="@+id/tv_talk_latitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="点击获取"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="分店:" />
+
+                <EditText
+                    android:id="@+id/ed_shop_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:background="@null"
+                    android:hint="请录入分店名称"
+                    android:paddingLeft="@dimen/x20"
+                    android:textColor="@color/text_color_666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="临近地铁:" />
+
+                <TextView
+                    android:id="@+id/tv_sub_select"
+                    style="@style/style_detail_right"
+                    android:text="请选择" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="距离地铁(米):" />
+
+                <EditText
+                    android:id="@+id/ed_sub_distance_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:background="@null"
+                    android:hint="距离地铁大概多少米"
+                    android:paddingLeft="@dimen/x20"
+                    android:textColor="@color/text_color_666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="行政区域:" />
+
+                <TextView
+                    android:id="@+id/tv_administrative_division_select"
+                    style="@style/style_detail_right"
+                    android:text="请选择" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="回访时间:" />
+
+                <TextView
+                    android:id="@+id/tv_talk_time_select"
+                    style="@style/style_detail_right"
+                    android:text="请选择" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="地址:" />
+
+                <EditText
+                    android:id="@+id/ed_area_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:background="@null"
+                    android:hint="请填写地址"
+                    android:paddingLeft="@dimen/x20"
+                    android:textColor="@color/text_color_666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:id="@+id/people"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x200"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x100"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_talk_left"
+                        android:text="物业负责人:" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/property_people"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/x10"
+                            android:layout_toLeftOf="@+id/iv_property_people_select"
+                            android:background="@null"
+                            android:hint="请填写物业负责人"
+                            android:paddingLeft="@dimen/x20"
+                            android:textColor="@color/text_color_666"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_property_people_select"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/x34"
+                            android:src="@mipmap/add" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/bg_e1e1e1"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x100"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_talk_left"
+                        android:text="联系方式:" />
+
+                    <EditText
+                        android:id="@+id/tv_tel_detail_visit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:background="@null"
+                        android:hint="请填写联系方式"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/x20"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:id="@+id/people_first"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x200"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x100"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_talk_left"
+                        android:text="物业负责人1:" />
+
+
+                    <EditText
+                        android:id="@+id/property_people_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:background="@null"
+                        android:hint="请填写物业负责人"
+                        android:paddingLeft="@dimen/x20"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/bg_e1e1e1"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x100"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_talk_left"
+                        android:text="联系方式1:" />
+
+                    <EditText
+                        android:id="@+id/tv_tel_detail_visit_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:background="@null"
+                        android:hint="请填写联系方式"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/x20"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+
+            <LinearLayout
+                android:id="@+id/people_second"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x200"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x100"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_talk_left"
+                        android:text="物业负责人2:" />
+
+                    <EditText
+                        android:id="@+id/property_people_second"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:background="@null"
+                        android:hint="请填写物业负责人"
+                        android:paddingLeft="@dimen/x20"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/bg_e1e1e1"
+                    android:paddingLeft="@dimen/x10"
+                    android:paddingRight="@dimen/x10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x100"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_talk_left"
+                        android:text="联系方式2:" />
+
+                    <EditText
+                        android:id="@+id/tv_tel_detail_visit_sencond"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:background="@null"
+                        android:hint="请填写联系方式"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/x20"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="合作模式:" />
+
+                <TextView
+                    android:id="@+id/tv_cooperation_mode_select"
+                    style="@style/style_detail_right"
+                    android:text="请选择" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/style_talk_select"
+                        android:text="总楼层:" />
+
+                    <TextView
+                        android:id="@+id/tv_floor_select"
+                        style="@style/style_detail_right"
+                        android:text="请选择" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/hezuo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/style_talk_select"
+                        android:text="意向合作楼层:" />
+
+                    <TextView
+                        android:id="@+id/tv_intention_floor_select"
+                        style="@style/style_detail_right"
+                        android:text="请选择" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/style_talk_select"
+                        android:text="总房间数:" />
+
+
+                    <EditText
+                        android:id="@+id/ed_room_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x24"
+                        android:background="@null"
+                        android:hint="请填写房间数"
+                        android:inputType="number"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/hezuo1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/style_talk_select"
+                        android:text="意向合作房量:" />
+
+
+                    <EditText
+                        android:id="@+id/ed_intention_room_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x24"
+                        android:background="@null"
+                        android:hint="请填写合作房量"
+                        android:inputType="number"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/style_detail_left"
+                        android:text="明窗:" />
+
+                    <EditText
+                        android:id="@+id/ed_talk_shining"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="请填写"
+                        android:inputType="number"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/style_detail_left"
+                        android:text="楼道窗:" />
+
+                    <EditText
+                        android:id="@+id/ed_talk_midnight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="请填写"
+                        android:inputType="number"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="报价:" />
+
+                <EditText
+                    android:id="@+id/ed_talk_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:background="@null"
+                    android:hint="请填写报价"
+                    android:paddingLeft="@dimen/x20"
+                    android:textColor="@color/text_color_666"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="合作意向:" />
+
+                <TextView
+                    android:id="@+id/tv_intention_select"
+                    style="@style/style_detail_right"
+                    android:text="请选择" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:id="@+id/lin_talk_detail_contract"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="@dimen/x100"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        style="@style/style_talk_left"
+                        android:text="签约合同:" />
+
+                    <TextView
+                        android:id="@+id/tv_tel_detail_contract"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:text="上传合同"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/x20"
+                        android:textColor="@color/text_color_666"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="物业外围环境照片:" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/x34">
+
+                    <ImageView
+                        android:id="@+id/talk_take_photos_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/photos" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y300"
+                android:orientation="horizontal"
+                android:padding="@dimen/x5">
+
+                <ImageView
+                    android:id="@+id/iv_outside_one"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingRight="@dimen/x5" />
+
+                <ImageView
+                    android:id="@+id/iv_outside_two"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingRight="@dimen/x5" />
+
+                <ImageView
+                    android:id="@+id/iv_outside_three"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="公区照片:" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/x34">
+
+                    <ImageView
+                        android:id="@+id/talk_take_photos_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/photos" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y300"
+                android:orientation="horizontal"
+                android:padding="@dimen/x5">
+
+                <ImageView
+                    android:id="@+id/iv_pblic_one"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingRight="@dimen/x5" />
+
+                <ImageView
+                    android:id="@+id/iv_pblic_two"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingRight="@dimen/x5" />
+
+                <ImageView
+                    android:id="@+id/iv_pblic_three"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_talk_left"
+                    android:text="房间照片:" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/x34">
+
+                    <ImageView
+                        android:id="@+id/talk_take_photos_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/add" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y400"
+                android:orientation="vertical"
+                android:padding="@dimen/x5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ed_room_one"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="8"
+                        android:background="@null"
+                        android:hint="请填写房型并拍照"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_image_one"
+                        android:layout_width="0dp"
+                        android:padding="@dimen/y8"
+                        android:layout_weight="1.6"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/photos" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/bg_e1e1e1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y300"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/x5">
+
+
+                    <ImageView
+                        android:id="@+id/iv_room_one1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_one2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_one3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:id="@+id/type_one"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y400"
+                android:orientation="vertical"
+                android:padding="@dimen/x5"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ed_room_two"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="8"
+                        android:background="@null"
+                        android:hint="请填写房型并拍照"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_image_two"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/y9"
+                        android:layout_weight="1.6"
+                        android:src="@mipmap/photos" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/bg_e1e1e1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y300"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/x5"
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/iv_room_two1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_two2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_two3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:id="@+id/type_two"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y400"
+                android:orientation="vertical"
+                android:padding="@dimen/x5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ed_room_three"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="8"
+                        android:background="@null"
+                        android:hint="请填写房型并拍照"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_image_three"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/y9"
+                        android:layout_weight="1.6"
+                        android:src="@mipmap/photos" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/bg_e1e1e1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y300"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/x5">
+
+
+                    <ImageView
+                        android:id="@+id/iv_room_three1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_three2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_three3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:id="@+id/type_three"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y400"
+                android:orientation="vertical"
+                android:padding="@dimen/x5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ed_room_four"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="8"
+                        android:background="@null"
+                        android:hint="请填写房型并拍照"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_image_four"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/y9"
+                        android:layout_weight="1.6"
+                        android:src="@mipmap/photos" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/bg_e1e1e1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y300"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/x5">
+
+
+                    <ImageView
+                        android:id="@+id/iv_room_four1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_four2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_four3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:id="@+id/type_four"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y400"
+                android:orientation="vertical"
+                android:padding="@dimen/x5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ed_room_five"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="8"
+                        android:background="@null"
+                        android:hint="请填写房型并拍照"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_image_five"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/y9"
+                        android:layout_weight="1.6"
+                        android:src="@mipmap/photos" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/bg_e1e1e1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y300"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/x5">
+
+
+                    <ImageView
+                        android:id="@+id/iv_room_five1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_five2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_five3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <LinearLayout
+                android:id="@+id/type_five"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y400"
+                android:orientation="vertical"
+                android:padding="@dimen/x5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ed_room_sex"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/x20"
+                        android:layout_weight="8"
+                        android:background="@null"
+                        android:hint="请填写房型并拍照"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_image_sex"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/y9"
+                        android:layout_weight="1.6"
+                        android:src="@mipmap/photos" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/bg_e1e1e1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y300"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/x5">
+
+                    <ImageView
+                        android:id="@+id/iv_room_sex1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_sex2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingRight="@dimen/x5" />
+
+                    <ImageView
+                        android:id="@+id/iv_room_sex3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x14"
+                android:background="@color/bg_f8f8f8" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1" />
+
+            <TextView
+                android:id="@+id/tv_tale_add_remark"
+                android:layout_width="@dimen/x160"
+                android:layout_height="@dimen/x40"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginTop="@dimen/x30"
+                android:background="@drawable/bg_button_blue_circle"
+                android:gravity="center"
+                android:text="添加备注"
+                android:textColor="@color/bg_26c2fc"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_tel_talk_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/x20">
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x20"
+                android:background="@color/bg_e1e1e1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x14"
+                android:background="@color/bg_f8f8f8" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1" />
+
+            <TextView
+                android:id="@+id/tv_talk_detail_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:background="@color/bg_26c2fc"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_e1e1e1" />
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x110"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/x2">
+
+        <RadioButton
+            android:id="@+id/rab_detailed"
+            style="@style/Nav_RadioButton"
+            android:drawableTop="@drawable/nav_first_home_tel_select"
+            android:text="明细" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="@dimen/x30"
+            android:layout_gravity="center_vertical"
+            android:background="@color/bg_e1e1e1" />
+
+        <RadioButton
+            android:id="@+id/rab_warehou"
+            style="@style/Nav_RadioButton"
+            android:drawableTop="@drawable/nav_first_home_ruku_select"
+            android:text="库房" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="@dimen/x30"
+            android:layout_gravity="center_vertical"
+            android:background="@color/bg_e1e1e1" />
+
+        <RadioButton
+            android:id="@+id/rab_mine"
+            style="@style/Nav_RadioButton"
+            android:drawableTop="@drawable/nav_iv_mine_img_select"
+            android:text="我的" />
+    </RadioGroup>
+
+</LinearLayout>

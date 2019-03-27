@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_choose_title" />
+
+    <View
+        android:id="@+id/v_tel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_e1e1e1" />
+
+    <LinearLayout
+        android:id="@+id/ll_tel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:background="@color/bg_f8f8f8"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_detailed_time"
+            style="@style/style_home_tel"
+            android:layout_marginLeft="@dimen/x77"
+            android:text="日期" />
+
+        <TextView
+            android:id="@+id/tv_detailed_area"
+            style="@style/style_home_tel"
+            android:layout_marginLeft="@dimen/x77"
+            android:text="区域" />
+
+        <TextView
+            android:id="@+id/tv_detailed_shop"
+            style="@style/style_home_tel"
+            android:layout_marginLeft="@dimen/x77"
+            android:text="分店" />
+
+        <TextView
+            android:id="@+id/tv_detailed_name"
+            style="@style/style_home_tel"
+            android:layout_marginLeft="@dimen/x77"
+            android:text="姓名" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_e1e1e1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_tel_null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView
+                android:id="@+id/rv_talk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tel_null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="暂未搜索到数据！"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

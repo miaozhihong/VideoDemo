@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_choose_title" />
+
+    <View
+        android:id="@+id/v_tel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_e1e1e1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/x100"
+        android:background="@color/bg_f8f8f8"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="姓名"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="首次拜访"
+            android:textSize="14sp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="跟进"
+            android:textSize="14sp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="pass"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="签约"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_e1e1e1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_tel_null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView
+                android:id="@+id/rv_tel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tel_null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="暂未搜索到数据！"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

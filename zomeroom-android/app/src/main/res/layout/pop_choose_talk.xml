@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y600"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_pop_choose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x2"
+                android:layout_marginBottom="@dimen/x2"
+                android:background="@color/bg_e1e1e1" />
+
+            <RadioGroup
+                android:id="@+id/rg_group"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y60"
+                    android:text="不限" />
+
+                <RadioButton
+                    android:id="@+id/rb_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y60"
+                    android:text="一周" />
+
+                <RadioButton
+                    android:id="@+id/rb_half"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y60"
+                    android:text="15天" />
+
+                <RadioButton
+                    android:id="@+id/rb_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="30天" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg_f8f8f8"
+            android:paddingTop="@dimen/x25"
+            android:paddingBottom="@dimen/x25" />
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_pop_choose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10"
+            android:paddingBottom="@dimen/x20"
+            android:layout_marginTop="@dimen/x20"
+            app:mcv_selectionColor="@color/text_color_1CC453"
+            app:mcv_showOtherDates="all" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x90"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_pop_choose_reset"
+            android:layout_width="@dimen/x120"
+            android:layout_height="@dimen/x60"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x180"
+            android:background="@drawable/bg_button_blue_circle"
+            android:gravity="center"
+            android:text="重置"
+            android:textColor="@color/bg_26c2fc" />
+
+        <TextView
+            android:id="@+id/tv_pop_choose_confirm"
+            android:layout_width="@dimen/x120"
+            android:layout_height="@dimen/x60"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x70"
+            android:background="@drawable/bg_button_blue"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_pop_choose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_4500000" />
+
+</LinearLayout>

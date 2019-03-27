@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="15dp"
+        android:layout_marginBottom="@dimen/x30"
+        android:text="登陆切换"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_operate"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x20"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginRight="@dimen/x100"
+            android:layout_marginLeft="@dimen/x100"
+            android:background="@drawable/switchstyle"
+            android:text="销售系统" />
+
+        <TextView
+            android:id="@+id/tv_interior"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/x20"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginRight="@dimen/x100"
+            android:layout_marginLeft="@dimen/x100"
+            android:gravity="center"
+            android:background="@drawable/switchstyle"
+            android:layout_height="wrap_content"
+            android:text="内务管理" />
+
+        <TextView
+            android:id="@+id/tv_market"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/x20"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginRight="@dimen/x100"
+            android:layout_marginLeft="@dimen/x100"
+            android:background="@drawable/switchstyle"
+            android:layout_height="wrap_content"
+            android:text="市场开发" />
+    <!--</LinearLayout>-->
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_e1e1e1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x110"
+        android:background="@color/bg_f8f8f8"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/x48"
+        android:paddingRight="@dimen/x28">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="黑名单"
+            android:textColor="@color/text_color_333"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:maxLength="11"
+            android:id="@+id/et_black_tel"
+            android:layout_width="@dimen/x300"
+            android:layout_height="@dimen/x60"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x40"
+            android:background="@drawable/bg_mine_rect"
+            android:hint="请输入要查询的号码"
+            android:inputType="number"
+            android:padding="@dimen/x10"
+            android:textColor="@color/text_color_333"
+            android:textColorHint="@color/text_color_666"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_black_select"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x40"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x100"
+            android:background="@drawable/bg_button_blue_circle"
+            android:gravity="center"
+            android:text="查询"
+            android:textColor="@color/bg_26c2fc"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_e1e1e1"
+        android:paddingLeft="@dimen/x10"
+        android:paddingRight="@dimen/x10"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_black_null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="暂未搜索到数据！"
+            />
+    </FrameLayout>
+</LinearLayout>

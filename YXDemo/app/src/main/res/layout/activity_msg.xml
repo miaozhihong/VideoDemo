@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.netease.nimlib.sdk.avchat.model.AVChatSurfaceViewRenderer
+        android:id="@+id/sur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <com.netease.nimlib.sdk.avchat.model.AVChatSurfaceViewRenderer
+            android:id="@+id/small_sur"
+            android:layout_width="64dp"
+            android:layout_height="98dp"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp">
+
+
+        <ImageView
+            android:id="@+id/videochat_hands_free"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_launcher_background" />
+
+        <ImageView
+            android:id="@+id/videochat_hangup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_launcher_background" />
+
+        <ImageView
+            android:id="@+id/videochat_hands_nowheat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/icon" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/call"
+        android:text="视频"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

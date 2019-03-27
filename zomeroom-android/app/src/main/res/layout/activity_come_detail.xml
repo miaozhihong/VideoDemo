@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.jm.mvp.ui.activity.TelDetailActivity">
+
+    <include layout="@layout/layout_title"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_e1e1e1"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x110"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:gravity="center"
+                    android:text="日期"
+                    android:textColor="@color/text_color_666"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_come_detail_time"
+                    android:layout_width="@dimen/x250"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color_333"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x35"
+                    android:gravity="center"
+                    android:text="咨询电话"
+                    android:textColor="@color/text_color_666"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/et_come_detail_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:text=""
+                    android:textColor="@color/text_color_333"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x14"
+                android:background="@color/bg_f8f8f8"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_detail_left"
+                    android:text="分店:"/>
+
+                <TextView
+                    android:id="@+id/tv_come_detail_shop"
+                    style="@style/style_detail_right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_detail_left"
+                    android:text="广告渠道:"/>
+
+                <TextView
+                    android:id="@+id/tv_come_detail_ad"
+                    style="@style/style_detail_right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_detail_left"
+                    android:text="地铁站:"/>
+
+                <TextView
+                    android:id="@+id/tv_come_detail_subway"
+                    style="@style/style_detail_right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_detail_left"
+                    android:text="关注公众号:"/>
+
+                <TextView
+                    android:id="@+id/tv_come_detail_account"
+                    style="@style/style_detail_right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_detail_left"
+                    android:text="进店回访时间:"/>
+
+                <TextView
+                    android:id="@+id/tv_come_detail_visit"
+                    style="@style/style_detail_right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_detail_left"
+                    android:text="预约进店时间:"/>
+
+                <TextView
+                    android:id="@+id/tv_come_detail_come"
+                    style="@style/style_detail_right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_detail_left"
+                    android:text="推送其他分店:"/>
+
+                <TextView
+                    android:id="@+id/tv_come_detail_push"
+                    style="@style/style_detail_right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_detail_left"
+                    android:text="顾客意向:"/>
+
+                <TextView
+                    android:id="@+id/tv_come_detail_time_intention"
+                    style="@style/style_detail_right"
+                    android:text="请选择"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"/>
+
+            <LinearLayout
+                android:id="@+id/ll_come_detail_time_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    style="@style/style_detail_left"
+                    android:text="房间号:"/>
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_come_detail_time_room"-->
+                <!--style="@style/style_detail_right"-->
+                <!--android:drawableRight="@null"-->
+                <!--android:text="3号441室"/>-->
+                <EditText
+                    android:id="@+id/et_come_detail_time_room"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/x20"
+                    android:layout_marginLeft="@dimen/x40"
+                    android:layout_marginRight="@dimen/x40"
+                    android:layout_marginTop="@dimen/x20"
+                    android:background="@drawable/bg_mine_rect"
+                    android:hint="请输入房间号"
+                    android:maxLines="3"
+                    android:paddingBottom="@dimen/x10"
+                    android:paddingLeft="@dimen/x20"
+                    android:paddingTop="@dimen/x10"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x14"
+                android:background="@color/bg_f8f8f8"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"/>
+
+            <TextView
+                android:id="@+id/tv_come_detail_add"
+                android:layout_width="@dimen/x160"
+                android:layout_height="@dimen/x40"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginTop="@dimen/x30"
+                android:background="@drawable/bg_button_blue_circle"
+                android:gravity="center"
+                android:text="添加备注"
+                android:textColor="@color/bg_26c2fc"
+                android:textSize="13sp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_come_detail_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/x30">
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:layout_marginTop="@dimen/x20"
+                android:background="@color/bg_e1e1e1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x14"
+                android:background="@color/bg_f8f8f8"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/bg_e1e1e1"/>
+
+            <TextView
+                android:id="@+id/tv_come_detail_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:background="@color/bg_26c2fc"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

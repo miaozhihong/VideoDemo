@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:id="@+id/rl_item_black"
+    >
+
+    <TextView
+        android:id="@+id/tv_item_black_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/x35"
+        android:text="18645935748"
+        android:textColor="@color/text_color_333"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_item_black_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x50"
+        android:layout_toRightOf="@+id/tv_item_black_tel"
+        android:text="备注的元婴"
+        android:textColor="@color/text_color_333"
+        android:textSize="13sp"/>
+
+    <ImageView
+        android:id="@+id/iv_item_black_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x35"
+        android:padding="@dimen/x10"
+        android:src="@mipmap/item_black_del"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_e1e1e1"
+        android:paddingLeft="@dimen/x10"
+        android:paddingRight="@dimen/x10"/>
+</RelativeLayout>

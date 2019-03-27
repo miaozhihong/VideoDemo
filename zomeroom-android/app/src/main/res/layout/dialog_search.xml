@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/y30"
+        android:paddingTop="@dimen/x30"
+        >
+
+        <EditText
+            android:id="@+id/et_pop_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y70"
+            android:layout_marginLeft="@dimen/x30"
+            android:layout_marginRight="@dimen/x30"
+            android:background="@drawable/bg_mine_rect"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/x20"
+            android:textColor="@color/text_color_333"
+            android:textColorHint="@color/text_color_666"
+            android:textSize="14sp"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_pop_select"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y70"
+        android:background="@color/bg_26c2fc"
+        android:gravity="center"
+        android:text="查询"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/bg_4500000"/>-->
+</LinearLayout>

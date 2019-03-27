@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/chat_video"
+        layout="@layout/activity_msg"
+         />
+
+    <include
+        android:id="@+id/chat_call"
+        layout="@layout/view_chat_call"
+         />
+
+    <FrameLayout
+        android:id="@+id/fl_bottom_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp" />
+</RelativeLayout>

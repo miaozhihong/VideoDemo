@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.jm.mvp.ui.activity.SubwayActivity">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_contracts"
+            android:layout_width="@dimen/x560"
+            android:layout_height="@dimen/y55"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@drawable/bg_home_search"
+            android:drawableLeft="@mipmap/subway_search"
+            android:drawablePadding="@dimen/x10"
+            android:hint="请输入查询联系人"
+            android:paddingLeft="@dimen/x25"
+            android:textColor="@color/text_color_333"
+            android:textColorHint="@color/text_color_666"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/text_color_333" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/x25" />
+
+</LinearLayout>

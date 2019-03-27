@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.jm.mvp.ui.activity.SubwayActivity">
+
+    <include layout="@layout/layout_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_subway"
+            android:layout_width="@dimen/x560"
+            android:layout_height="@dimen/y55"
+            android:layout_marginLeft="@dimen/x30"
+            android:background="@drawable/bg_home_search"
+            android:drawableLeft="@mipmap/subway_search"
+            android:drawablePadding="@dimen/x10"
+            android:hint="请输入地铁站"
+            android:paddingLeft="@dimen/x25"
+            android:textColor="@color/text_color_333"
+            android:textColorHint="@color/text_color_666"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_subway_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/text_color_333"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_subway"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/x25"/>
+
+        <TextView
+            android:id="@+id/tv_subway_null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="抱歉，暂未搜索到结果。"
+            android:textColor="@color/text_color_333"
+            android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>

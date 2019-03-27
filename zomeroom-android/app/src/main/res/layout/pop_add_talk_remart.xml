@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/x600"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x80">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="添加备注"
+                android:textColor="@color/text_color_111"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/iv_pop_add_close"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x20"
+                android:src="@mipmap/black_close"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/bg_e1e1e1"/>
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rb_custom"
+                android:layout_width="0dp"
+                android:checked="true"
+                android:layout_weight="1.2"
+                android:text="自定义回访"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/rb_shop"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="进店回访"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/rb_tel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="电话回访"
+                android:layout_height="match_parent" />
+        </RadioGroup>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/bg_e1e1e1"/>
+
+
+        <EditText
+            android:id="@+id/et_pop_add_reason"
+            android:layout_width="@dimen/x550"
+            android:layout_height="@dimen/x300"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x50"
+            android:background="@drawable/bg_mine_rect"
+            android:gravity="top"
+            android:hint="请添加备注说明"
+            android:padding="@dimen/x12"
+            android:textColor="@color/text_color_333"
+            android:textColorHint="@color/text_color_999"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_pop_add_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x80"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/x50"
+            android:background="@drawable/bg_button_blue_bottom"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.jm.mvp.ui.activity.SubwayActivity">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_map"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y55"
+            android:layout_marginLeft="@dimen/x40"
+            android:layout_marginRight="@dimen/x40"
+            android:background="@drawable/bg_home_search"
+            android:drawableLeft="@mipmap/subway_search"
+            android:drawablePadding="@dimen/x10"
+            android:hint="请输入分店名称"
+            android:paddingLeft="@dimen/x25"
+            android:textColor="@color/text_color_333"
+            android:textColorHint="@color/text_color_666"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_lnglat"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/style_detail_map"
+                android:text="分店经度:" />
+
+            <TextView
+                android:id="@+id/tv_map_longitude"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_color_666"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/style_detail_map"
+                android:text="分店纬度:" />
+
+            <TextView
+                android:id="@+id/tv_map_latitude"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_color_666"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_e1e1e1"
+        android:paddingLeft="@dimen/x10"
+        android:paddingRight="@dimen/x10" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_map"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/x20"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mv_map"
+        android:background="@color/bg_3300000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.amap.api.maps.MapView>
+</LinearLayout>
