@@ -108,7 +108,7 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
     private MyPopupWindow mIntentionPop;
     private MyPopupWindow mSearchPop;
     private TelPresenter mPresenter;
-    private  QBadgeView qBadgeView;
+    private QBadgeView qBadgeView;
     /**
      * 筛选的数据
      */
@@ -120,15 +120,16 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
     private PopChooseAdapter mTelPopAdapter;
     private PopChooseAdapter mShopPopAdapter;
     private SearchDialogFragment mDialogFragment;
-    private  static  int tels=0;
+    private static int tels = 0;
     private SharedPreferences sharedPreferences;
     private TitlesDao titlesDao;
     private TitlesDao titlesDao1;
-    ArrayList<TelListBean.DataBean.ListBean> mList=new ArrayList<>();
-    ArrayList<String> mTel=new ArrayList<>();
-    ArrayList<UserLetter> mTels=new ArrayList<>();
-    ArrayList<String> mDao=new ArrayList<>();
-    ArrayList<UserLetter> mDaos=new ArrayList<>();
+    ArrayList<TelListBean.DataBean.ListBean> mList = new ArrayList<>();
+    ArrayList<String> mTel = new ArrayList<>();
+    ArrayList<UserLetter> mTels = new ArrayList<>();
+    ArrayList<String> mDao = new ArrayList<>();
+    ArrayList<UserLetter> mDaos = new ArrayList<>();
+
     @Override
     public View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mPresenter = new TelPresenter(this);
@@ -157,7 +158,7 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
         ivMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(),MessageActivity.class));
+                startActivity(new Intent(getActivity(), MessageActivity.class));
                 qBadgeView.setVisibility(View.GONE);
             }
         });
@@ -176,8 +177,8 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
             public void call(String tel, int id) {
                 SPUtils.put("tels", tel);
                 SPUtils.put("tel", tel);
-                tels=1;
-                edit.putInt("tels",id);
+                tels = 1;
+                edit.putInt("tels", id);
                 edit.commit();
                 CommonUtils.callTel(tel, getActivity());
                 mPresenter.call(String.valueOf(id));
@@ -194,10 +195,10 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
                 intent.putExtra(Constants.SHOP_ID, id);
                 intent.putExtra("color", RecycLeftAdapter.color);
                 int tels = sharedPreferences.getInt("tels", 1);
-                if (id==tels){
-                    intent.putExtra("tels",1);
-                }else {
-                    intent.putExtra("tels",0);
+                if (id == tels) {
+                    intent.putExtra("tels", 1);
+                } else {
+                    intent.putExtra("tels", 0);
                 }
 
                 startActivityForResult(intent, Constants.TEL);
@@ -337,20 +338,23 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
 
             @Override
             public void confirmListener(PopChooseAdapter adapter) {
-                mBean.setMainType("3");
-                mBean.setMinorType("0");
-                mBean.setShopId("0");
-                mBean.setTel("");
-                mPresenter.netAndData(mBean, Constants.DOWN_REFRESH);
-                mIntentionPopAdapter = adapter;
-                setSelect(mTelPopAdapter);
-                setSelect(mShopPopAdapter);
-                ((MaterialCalendarView) mShopPop.getContentView().findViewById(R.id.cv_pop_choose))
-                        .setDateSelected(mShopDate, false);
-                ((MaterialCalendarView) mTelPop.getContentView().findViewById(R.id.cv_pop_choose))
-                        .setDateSelected(mTelDate, false);
-                mShopDate = null;
-                mTelDate = null;
+                try {
+                    mBean.setMainType("3");
+                    mBean.setMinorType("0");
+                    mBean.setShopId("0");
+                    mBean.setTel("");
+                    mPresenter.netAndData(mBean, Constants.DOWN_REFRESH);
+                    mIntentionPopAdapter = adapter;
+                    setSelect(mTelPopAdapter);
+                    setSelect(mShopPopAdapter);
+                    ((MaterialCalendarView) mShopPop.getContentView().findViewById(R.id.cv_pop_choose))
+                            .setDateSelected(mShopDate, false);
+                    ((MaterialCalendarView) mTelPop.getContentView().findViewById(R.id.cv_pop_choose))
+                            .setDateSelected(mTelDate, false);
+                    mShopDate = null;
+                    mTelDate = null;
+                } catch (Exception e) {
+                }
             }
 
             @Override
@@ -400,10 +404,10 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
     }
 
     @OnClick({R.id.rg_title_left, R.id.rg_title_right, R.id.iv_title_second_choose,
-            R.id.tv_tel_tel, R.id.tv_tel_shop, R.id.tv_tel_intention,R.id.iv_message})
+            R.id.tv_tel_tel, R.id.tv_tel_shop, R.id.tv_tel_intention, R.id.iv_message})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-                case R.id.rg_title_left:
+            case R.id.rg_title_left:
                 mBean.setIsCall("-1");
                 mPresenter.netAndData(mBean, Constants.DOWN_REFRESH);
                 break;
@@ -483,22 +487,22 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
         mTvNull.setVisibility(View.GONE);
         //判断是否是拨出去的电话
         String tels = (String) SPUtils.get("tels", "");
-        if (null==tels){
-            tels="1";
+        if (null == tels) {
+            tels = "1";
         }
         String tel = (String) SPUtils.get("tel", "");
-        if (!tels.equals(tel)){
-            if (tel.length()>0){
-                for (int i = 0; i < list.size(); i++){
-                    if (tel.equals(list.get(i).getTel()) && list.get(i).getClientIntention()==1 || tel.equals(list.get(i).getTel()) && list.get(i).getClientIntention()==2){
+        if (!tels.equals(tel)) {
+            if (tel.length() > 0) {
+                for (int i = 0; i < list.size(); i++) {
+                    if (tel.equals(list.get(i).getTel()) && list.get(i).getClientIntention() == 1 || tel.equals(list.get(i).getTel()) && list.get(i).getClientIntention() == 2) {
                         final int finalI = i;
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext()).setTitle("系统提示")
-                                .setMessage(list.get(i).getTel()+"这条数据是否转进店？")
+                                .setMessage(list.get(i).getTel() + "这条数据是否转进店？")
                                 .setNegativeButton("否", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         Toast.makeText(getContext(), "已取消转进店", Toast.LENGTH_SHORT).show();
-                                        SPUtils.put("tel","");
+                                        SPUtils.put("tel", "");
                                     }
                                 }).setPositiveButton("是", new DialogInterface.OnClickListener() {
                                     @Override
@@ -513,68 +517,68 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
         }
 
 
-       //是否存在推送信息
-        for (int i = 0; i <list.size() ; i++) {
-            if (null!=list.get(i).getChannelName()) {
-                if (list.get(i).getChannelName().equals("分店推送") &&null!=list.get(i).getChannelName() && !list.get(i).getChannelName().equals("请选择") && list.get(i).getClientIntention()==1) {
+        //是否存在推送信息
+        for (int i = 0; i < list.size(); i++) {
+            if (null != list.get(i).getChannelName()) {
+                if (list.get(i).getChannelName().equals("分店推送") && null != list.get(i).getChannelName() && !list.get(i).getChannelName().equals("请选择") && list.get(i).getClientIntention() == 1) {
                     mList.add(list.get(i));
                 }
             }
         }
         //將推送用戶信息添加到數據庫中
         for (int i = 0; i < mList.size(); i++) {
-            mTels.add(new UserLetter(mList.get(i).getTel(),mList.get(i).getShopId()+"",(String)SPUtils.get("userName","")));
+            mTels.add(new UserLetter(mList.get(i).getTel(), mList.get(i).getShopId() + "", (String) SPUtils.get("userName", "")));
             mTel.add(mList.get(i).getTel());
         }
         //添加到数据库
-        SimpleDateFormat formatter = new  SimpleDateFormat ("yyyy年MM月dd日   HH:mm:ss");
-        Date curDate =  new Date(System.currentTimeMillis());
-        String time =formatter.format(curDate);
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日   HH:mm:ss");
+        Date curDate = new Date(System.currentTimeMillis());
+        String time = formatter.format(curDate);
         List<Titles> titles = titlesDao.loadAll();
-        List<Titles> titles1= titlesDao1.loadAll();
-       if (titles.size()>0){
-           for (int i = 0; i < titles.size(); i++) {
-               mDaos.add(new UserLetter(titles.get(i).getPhone(),titles.get(i).getSender_letter(),titles.get(i).getAddressee_letter()));
-               mDao.add(titles.get(i).getPhone());
-           }
-           for (int i = 0; i < mTel.size(); i++) {
-               if (mDao.contains(mTel.get(i))){
-               }else {
-                   if (titles1.size()>0){
-                       for (int j = 0; j < titles1.size(); j++) {
-                           mDao.add(titles1.get(j).getPhone());
-                       }
-                       for (int m = 0; m < mTel.size(); m++) {
-                           if (mDao.contains(mTel.get(m))){
-                           }else {
-                               titlesDao.insert(new Titles(null,NotificationMonitorService.pak_Name,"推送消息","收到一条手机号为"+mTels.get(m).getPhone()+"的电话咨询推送邮件,请您尽快处理",time,"推送邮件",mTels.get(m).getPhone(),"是",mTels.get(m).getSender(),(String)SPUtils.get("userName","")));
-                           }
-                       }
-                   }else {
-                       for (int k = 0; i < mTel.size(); k++) {
-                           titlesDao.insert(new Titles(null,NotificationMonitorService.pak_Name,"推送消息","收到一条手机号为"+mTels.get(k).getPhone()+"的电话咨询推送邮件,请您尽快处理",time,"推送邮件",mTels.get(k).getPhone(),"是",mTels.get(k).getSender(),(String)SPUtils.get("userName","")));
-                       }
-                   }
-               }
-           }
-       }else {
-          if (titles1.size()>0){
-              for (int i = 0; i < titles1.size(); i++) {
-                  mDaos.add(new UserLetter(titles1.get(i).getPhone(),titles1.get(i).getSender_letter(),titles1.get(i).getAddressee_letter()));
-                  mDao.add(titles1.get(i).getPhone());
-              }
-              for (int i = 0; i < mTel.size(); i++) {
-                  if (mDao.contains(mTel.get(i))){
-                  }else {
-                      titlesDao.insert(new Titles(null,NotificationMonitorService.pak_Name,"推送消息","收到一条手机号为"+mTels.get(i).getPhone()+"的电话咨询推送邮件,请您尽快处理",time,"推送邮件",mTels.get(i).getPhone(),"是",mTels.get(i).getSender(),(String)SPUtils.get("userName","")));
-                  }
-              }
-          }else {
-              for (int i = 0; i < mTel.size(); i++) {
-                  titlesDao.insert(new Titles(null,NotificationMonitorService.pak_Name,"推送消息","收到一条手机号为"+mTels.get(i).getPhone()+"的电话咨询推送邮件,请您尽快处理",time,"推送邮件",mTels.get(i).getPhone(),"是",mTels.get(i).getSender(),(String)SPUtils.get("userName","")));
-              }
-          }
-       }
+        List<Titles> titles1 = titlesDao1.loadAll();
+        if (titles.size() > 0) {
+            for (int i = 0; i < titles.size(); i++) {
+                mDaos.add(new UserLetter(titles.get(i).getPhone(), titles.get(i).getSender_letter(), titles.get(i).getAddressee_letter()));
+                mDao.add(titles.get(i).getPhone());
+            }
+            for (int i = 0; i < mTel.size(); i++) {
+                if (mDao.contains(mTel.get(i))) {
+                } else {
+                    if (titles1.size() > 0) {
+                        for (int j = 0; j < titles1.size(); j++) {
+                            mDao.add(titles1.get(j).getPhone());
+                        }
+                        for (int m = 0; m < mTel.size(); m++) {
+                            if (mDao.contains(mTel.get(m))) {
+                            } else {
+                                titlesDao.insert(new Titles(null, NotificationMonitorService.pak_Name, "推送消息", "收到一条手机号为" + mTels.get(m).getPhone() + "的电话咨询推送邮件,请您尽快处理", time, "推送邮件", mTels.get(m).getPhone(), "是", mTels.get(m).getSender(), (String) SPUtils.get("userName", "")));
+                            }
+                        }
+                    } else {
+                        for (int k = 0; i < mTel.size(); k++) {
+                            titlesDao.insert(new Titles(null, NotificationMonitorService.pak_Name, "推送消息", "收到一条手机号为" + mTels.get(k).getPhone() + "的电话咨询推送邮件,请您尽快处理", time, "推送邮件", mTels.get(k).getPhone(), "是", mTels.get(k).getSender(), (String) SPUtils.get("userName", "")));
+                        }
+                    }
+                }
+            }
+        } else {
+            if (titles1.size() > 0) {
+                for (int i = 0; i < titles1.size(); i++) {
+                    mDaos.add(new UserLetter(titles1.get(i).getPhone(), titles1.get(i).getSender_letter(), titles1.get(i).getAddressee_letter()));
+                    mDao.add(titles1.get(i).getPhone());
+                }
+                for (int i = 0; i < mTel.size(); i++) {
+                    if (mDao.contains(mTel.get(i))) {
+                    } else {
+                        titlesDao.insert(new Titles(null, NotificationMonitorService.pak_Name, "推送消息", "收到一条手机号为" + mTels.get(i).getPhone() + "的电话咨询推送邮件,请您尽快处理", time, "推送邮件", mTels.get(i).getPhone(), "是", mTels.get(i).getSender(), (String) SPUtils.get("userName", "")));
+                    }
+                }
+            } else {
+                for (int i = 0; i < mTel.size(); i++) {
+                    titlesDao.insert(new Titles(null, NotificationMonitorService.pak_Name, "推送消息", "收到一条手机号为" + mTels.get(i).getPhone() + "的电话咨询推送邮件,请您尽快处理", time, "推送邮件", mTels.get(i).getPhone(), "是", mTels.get(i).getSender(), (String) SPUtils.get("userName", "")));
+                }
+            }
+        }
 
         mTelAdapter.replace(list);
         EventBus.getDefault().post(list);
@@ -590,8 +594,6 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
     public void showNotMore() {
         ToastUtils.ToastCenter("没有更多了");
     }
-
-
 
 
     @Override
@@ -719,9 +721,9 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
         qBadgeView = new QBadgeView(getActivity());
         qBadgeView.setFocusable(true);
         qBadgeView.bindTarget(ivMessage);//设置要显示消息提示的View 控件
-        if (titles.size()==0){
+        if (titles.size() == 0) {
             qBadgeView.setVisibility(View.GONE);
-        }else if (titles.size()>0) {
+        } else if (titles.size() > 0) {
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -730,7 +732,7 @@ public class TelFragment extends BaseFragment<TelPresenter> implements TelContra
                     qBadgeView.setExactMode(true);//设置是否显示精确模式数值
                 }
             });
-        }else {
+        } else {
             qBadgeView.setVisibility(View.GONE);
         }
     }
